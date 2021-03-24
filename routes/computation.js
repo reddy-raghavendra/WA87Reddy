@@ -13,9 +13,9 @@ router.get('/', function(req, res, next) {
     } else {
         number = input;
     }
-    console.log(input);
-    console.log("inside");
-    res.send(`Math.round() applied to ${number} is ${Math.round(number)}`);
+    res.render('computation', {
+        title: `Math.round() applied to ${number} is ${Math.round(number)}`
+    });
 });
 
 module.exports = router;
